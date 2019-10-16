@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<p>{{ x1 }}</p>
+<p>{{ x2 }}</p>
+<!-- <p>{{ x3 }}</p> -->
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.x1 = "John";
+    $scope.x2 = angular.uppercase($scope.x1);
+    // $scope.x3 = angular.isString($scope.x1);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* line 3, ../sass/background-origin.scss */
+.example {
+  padding: 2em;
+}
+/* line 5, ../sass/background-origin.scss */
+.example div {
+  background-image: url("../images/bgo.png");
+  background-repeat: repeat;
+  background-position: top left;
+  border: 10px solid rgba(255, 0, 0, 0.5);
+  color: white;
+  text-shadow: black 2px 2px;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+/* line 18, ../sass/background-origin.scss */
+.example #padding-box {
+  -moz-background-origin: padding;
+  -o-background-origin: padding-box;
+  -webkit-background-origin: padding;
+  background-origin: padding-box;
+}
+/* line 21, ../sass/background-origin.scss */
+.example #border-box {
+  -moz-background-origin: border;
+  -o-background-origin: border-box;
+  -webkit-background-origin: border;
+  background-origin: border-box;
+}
+/* line 24, ../sass/background-origin.scss */
+.example #content-box {
+  -moz-background-origin: content;
+  -o-background-origin: content-box;
+  -webkit-background-origin: content;
+  background-origin: content-box;
+}

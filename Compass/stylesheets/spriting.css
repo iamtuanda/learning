@@ -1,0 +1,29 @@
+/* line 56, social/*.png */
+.social-sprite, .social-instagram, .social-youtube {
+  background-image: url('../images/social-s107fe52665.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.social-instagram {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.social-youtube {
+  background-position: 0 -32px;
+}
+
+/* line 6, ../sass/spriting.scss */
+.social-link {
+  text-align: center;
+}
+/* line 8, ../sass/spriting.scss */
+.social-link a {
+  text-decoration: none;
+  display: inline-block;
+  width: 80px;
+  height: 32px;
+  cursor: pointer;
+  float: left;
+}

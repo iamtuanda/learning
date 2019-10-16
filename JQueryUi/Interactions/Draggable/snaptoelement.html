@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Snap To Element</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+		
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable1" ).draggable({
+				snap: true
+			});
+			$( "#draggable2" ).draggable({
+				snap: ".out",
+				snapMode: "outer"
+			});
+			$( "#draggable3" ).draggable({
+				snap: ".out",
+				snapMode: "inner"
+			});
+			$( "#draggable4" ).draggable({
+				grid: [150, 150]
+
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div id="draggable" style="width: 50%;padding: 10px;border:2px solid black;text-align: center;">
+		<div id="draggable1" style="width: 50px;padding: 10px;border:1px solid blue;text-align: center; background-color: blue;">
+			<p></p>
+		</div><br>
+		<div id="draggable2" style="width: 50px;padding: 10px;border:1px solid red; text-align: center;background-color: lightblue;">
+		    <p></p>
+	    </div><br>
+	    <div id="draggable3" style="width: 50px;padding: 10px;border:1px solid lightgreen; text-align: center;">
+		    <p></p>
+	    </div><br>
+	    <div id="draggable4" style="width: 50px;padding: 10px;border:1px solid lightblue; text-align: center;">
+	    	<p></p>
+	    </div>
+
+	    
+	</div><br><br><br>
+	<div class="out" style="width: 50%; height:100px; padding: 10px; border:2px solid black;">
+		
+	</div>
+	
+</body>
+</html>

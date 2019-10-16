@@ -1,0 +1,16 @@
+/* line 2, nesting.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 7, nesting.scss */
+nav li {
+  display: inline-block;
+}
+/* line 10, nesting.scss */
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}

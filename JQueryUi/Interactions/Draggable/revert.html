@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Revert</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+		#draggable1, #draggable2{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			float: left;
+			margin:0 10px 10px 0;
+			border: 2px solid lightgreen;
+			background-color: lightblue;
+		}
+		.clone{
+			width: 70;
+			height: 70;
+			border: 1px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable1" ).draggable({
+				revert: true
+			});
+			$( "#draggable2" ).draggable({
+				revert: true,
+				helper: "clone"
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="draggable1">
+		<p>revert</p>
+	</div>
+	<div id="draggable2">
+		<p class="clone">revert helper clone</p>
+	</div>
+
+
+
+
+</body>
+</html>

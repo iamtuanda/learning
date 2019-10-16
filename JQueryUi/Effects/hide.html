@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Effect - Hide </title>
+	<script type="text/javascript" src="../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../jquery-ui.css">
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        border: 1px solid red;
+      }
+    </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+      $( "button" ).click(function() {
+
+        $( "div" ).hide( "drop", { direction: "down" }, "slow" );
+      });
+    });
+	</script>
+</head>
+
+<body>
+  <button>hide the div</button>
+    <div></div>
+</body>
+
+</html>

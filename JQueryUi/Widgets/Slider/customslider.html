@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Widgets - Slider Customslider </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+  <style>
+      #custom-handle {
+
+        width: 3em;
+        height: 1.6em;
+        top: 50%;
+        outline-color:  margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+      }
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+      var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  } );
+	</script>
+</head>
+<body>
+ 
+<div id="slider">
+  <div id="custom-handle" class="ui-slider-handle"></div>
+</div>
+ 
+ 
+</body>
+</html>

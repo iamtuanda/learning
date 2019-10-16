@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Droppable - </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable" ).draggable();
+			$( "#droppable, #droppable-inner" ).droppable({
+				classes :
+				{
+					'ui-droppable-active' : 'active',
+					'ui-droppable-hover' : 'hover',
+				},
+				drop: function( event, ui ) {
+					$( this )
+					.addClass( "background-red" )
+					.find( "> p" )
+					.html( "Dropped!" );
+				}
+			});
+			$( "#droppable2, #droppable2-inner" ).droppable({
+				greedy: true,
+				classes: {
+					"ui-droppable-active": "active",
+					"ui-droppable-hover": "hover"
+				},
+				drop: function( event, ui ) {
+					$( this )
+					.addClass( "background-red" )
+					.find( "> p" )
+					.html( "Dropped!" );
+				}
+			});
+		});
+	</script>
+	<style>
+		#draggable { 
+			width: 100px; 
+			height: 40px; 
+			padding: 0.5em; 
+			float: left; 
+			margin: 10px 10px 10px 0; 
+		}
+		#droppable, #droppable2 { 
+			width: 230px; 
+			height: 120px; 
+			padding: 0.5em; 
+			float: left; 
+			margin: 10px; 
+		}
+		#droppable-inner, #droppable2-inner { 
+			width: 170px; 
+			height: 60px; 
+			padding: 0.5em; 
+			float: left; 
+			margin: 10px; 
+		}
+		#droppable.active,#droppable-inner.active,#droppable2.active,#droppable2-inner.active{
+			background: blue;
+		}
+		#droppable.hover,#droppable-inner.hover,#droppable2.hover,#droppable2-inner.hover{
+			background: yellow;
+		}
+		#droppable.background-red,#droppable-inner.background-red,#droppable2.background-red,#droppable2-inner.background-red{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="draggable" class="ui-widget-content">
+		<p>Drag me to my target</p>
+	</div>
+	
+	<div id="droppable" class="ui-widget-header">
+		<p>Outer droppable</p>
+		<div id="droppable-inner" class="ui-widget-header">
+			<p>Inner droppable (not greedy)</p>
+		</div>
+	</div>
+	
+	<div id="droppable2" class="ui-widget-header">
+		<p>Outer droppable</p>
+		<div id="droppable2-inner" class="ui-widget-header">
+			<p>Inner droppable (greedy)</p>
+		</div>
+	</div>
+</body>
+</html>

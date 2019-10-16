@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Resizable-Textarea </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+  .ui-resizable-se{
+  	bottom: 17px;
+  } 
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#resizable" ).resizable({
+				handles: "se"
+			});
+		});
+	</script>
+</head>
+<body>
+		<textarea id="resizable" rows="5" cols="20"></textarea>
+	
+</body>
+</html>

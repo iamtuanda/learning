@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Filtering</title>
+<style>
+.siblings * { 
+  display: block;
+  border: 1px solid green;
+  color: gray;
+  padding: 5px;
+  margin: 15px;
+
+}
+
+</style>
+
+<script  type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+		  $("div").first().css({"background-color":"yellow", "color" : "black" });
+		});
+		$("#btn2").click(function() {
+			$("div").last().css({"background-color": "lightgreen",});
+		});
+		$("#btn3").click(function() {
+			$("div").filter("#div2").css('background-color', 'yellow');
+			//not <> filter
+		});
+
+
+
+	});
+</script>
+
+</head>
+<body class="siblings">
+ <div id="div1">
+  <p>huhuhuhu</p>
+  <span>love tmh techlab</span>
+</div>
+<div id="div2">
+	<p>hihiihi</p>
+</div>
+<div id="div3">
+	<p>hhhahaha</p>
+</div>
+<button id="btn1">First</button>
+<button id="btn2">Last</button>
+<button id="btn3">Filter</button>
+</body>
+</html>

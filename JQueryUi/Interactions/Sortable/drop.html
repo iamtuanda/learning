@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Sortable - Drop placeholder </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+    #sortable { 
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+      width: 60%; 
+    }
+
+    #sortable li { 
+      margin: 0 5px 5px 5px; 
+      padding: 5px; 
+      font-size: 1.2em; 
+      height: 1.5em; 
+    }
+
+    #sortable li { 
+    height: 1.5em; 
+    line-height: 1.2em; 
+    }
+
+    .ui-state-highlight { 
+      height: 1.5em; 
+      line-height: 1.2em; 
+      background-color: red;
+    }
+
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+      $( "#sortable" ).sortable({
+      placeholder: "ui-state-highlight"
+    });
+    $( "#sortable" ).disableSelection();
+  } );
+	</script>
+</head>
+<body>
+  <ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>descendant</title>
+<style>
+.descendants * { 
+  display: block;
+  border: 1px solid lightgreen;
+  color: lightgreen;
+  padding: 5px;
+  margin: 15px;
+}
+
+</style>
+
+<script  type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  // $("div").children("p#one").css({"color": "blue", "border": "3px solid black"});
+  $("div").find("P#one").css({"color": "blue", "border": "3px solid black"});
+
+
+
+});
+
+</script>
+
+</head>
+<body>
+	<div class="descendants" style="width:500px;">div (current element) 
+  <p id="one">p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p id="two">p (child)
+    <span>span (grandchild)</span>
+  </p> 
+</div>
+</body>
+</html>

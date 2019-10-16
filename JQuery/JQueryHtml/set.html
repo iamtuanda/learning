@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SetHtmlJQuery</title>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  //change after click in text
+	$("#btn1").click(function(){
+	$("#set1").text("day la vi du ve set text");
+
+	});
+
+   // change after click in html
+
+	$("#btn2").click(function(){
+	$("#set2").html("<em> aaaaaaaaa </em>");
+  });
+
+   
+
+   //change tmh... ---> tmh.../product after click 
+ $("#btn3").click(function(){
+ 
+ $("#tmh").attr("href", "http://www.tmh-techlab.vn/product");
+
+   });
+  
+$("#btn4").click(function(){
+	$("#val").val("ngoc binh");
+  });
+
+});
+
+</script>
+</head>
+
+<body>
+<p id="set1"> hihiheheh </p>
+<p id="set2"> hâhhahahhaha</p>
+
+<p><a href="http://www.tmh-techlab.vn" id="tmh">  tmh-techlab.vn </a></p>
+<p>Name : <input type="text" id="val" value="TuanDinh"> </p>
+
+
+<button id="btn1">click text</button>
+<button id="btn2">click html</button>
+<button id="btn3">chang href</button>
+<button id="btn4">click value</button>
+</body>
+</html>

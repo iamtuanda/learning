@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AngularJs - DataBinding</title>
+        <style>*{margin:0}body{padding:20px}</style>
+        <script src="angular.min.js"></script>
+        <script language="javascript">
+            var app = angular.module('myApp', []);
+           app.controller('optionsController', ['$scope', function($scope) {
+                $scope.firstname = "tuanda";
+                $scope.changeName = function() {
+                    $scope.firstname = "dinhanhtuan";
+                };
+                         
+            }]);
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="optionsController">
+            <h1 ng-click="changeName()">{{firstname}}</h1>
+        </div>
+    </body>
+</html>

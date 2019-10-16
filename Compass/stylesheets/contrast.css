@@ -1,0 +1,10 @@
+/* line 7, ../sass/contrast.scss */
+.example p.dark {
+  background-color: #5f1210;
+  color: #e7e7e7;
+}
+/* line 10, ../sass/contrast.scss */
+.example p.light {
+  background-color: #fa9e9c;
+  color: #333333;
+}

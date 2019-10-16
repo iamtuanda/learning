@@ -1,0 +1,23 @@
+//Khai báo 4 biến lưu mã màu
+$home: #F7E900;
+$about: #FF5F09;
+$news: #A0005E;
+$links: #41004B;
+//Tạo biến list (danh sách) với 4 phần tử trên
+$pages: $home,
+$about,
+$news,
+$links;
+
+@for $i from 1 through length($pages) {
+    body.page-#{$i} {
+        background: nth($pages, $i);
+    }
+}
+
+
+@each $item in $pages {
+    body.section-#{ index($pages, $item)} {
+        background: $item;
+    }
+}

@@ -1,0 +1,9 @@
+/* line 2, ../sass/elementoftype.scss */
+.example address, .example article, .example aside, .example blockquote, .example center, .example dir, .example div, .example dd, .example details, .example dl, .example dt, .example fieldset, .example figcaption, .example figure, .example form, .example footer, .example frameset, .example h1, .example h2, .example h3, .example h4, .example h5, .example h6, .example hr, .example header, .example hgroup, .example isindex, .example main, .example menu, .example nav, .example noframes, .example noscript, .example ol, .example p, .example pre, .example section, .example summary, .example ul {
+  border: 1px solid #777777;
+  margin: 1em 3em;
+}
+/* line 6, ../sass/elementoftype.scss */
+.example a, .example abbr, .example acronym, .example audio, .example b, .example basefont, .example bdo, .example big, .example br, .example canvas, .example cite, .example code, .example command, .example datalist, .example dfn, .example em, .example embed, .example font, .example i, .example img, .example input, .example keygen, .example kbd, .example label, .example mark, .example meter, .example output, .example progress, .example q, .example rp, .example rt, .example ruby, .example s, .example samp, .example select, .example small, .example span, .example strike, .example strong, .example sub, .example sup, .example textarea, .example time, .example tt, .example u, .example var, .example video, .example wbr {
+  color: #cc0000;
+}

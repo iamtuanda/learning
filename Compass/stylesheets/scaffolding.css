@@ -1,0 +1,15 @@
+/* line 2, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_scaffolding.scss */
+.example table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 5, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_scaffolding.scss */
+.example table td,
+.example table th {
+  padding: 2px;
+}
+/* line 8, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_scaffolding.scss */
+.example table td.numeric,
+.example table th.numeric {
+  text-align: right;
+}

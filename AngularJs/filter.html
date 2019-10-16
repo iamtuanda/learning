@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AngularJs-Filters</title>
+<script src="angular.min.js"></script>
+</head>
+<body>
+<h2>Ung dung AngularJS</h2>
+<div ng-app="ungdungAngularjs" ng-controller="sinhvienController">
+<table border="0">
+<tr><td>Nhap ho:</td><td><input type="text" ng-model="sinhvien.ho"></td></tr>
+<tr><td>Nhap ten: </td><td><input type="text" ng-model="sinhvien.ten"></td></tr>
+<tr><td>Nhap hoc phi: </td><td><input type="text" ng-model="sinhvien.hocphi"></td></tr>
+<tr><td>Nhap mon hoc: </td><td><input type="text" ng-model="tenMonHoc"></td></tr>
+</table>
+<br/>
+<table border="0">
+<tr><td>Ten dang chu hoa: </td><td>{{sinhvien.hoten() | uppercase}}</td></tr>
+<tr><td>Ten dang chu thuong: </td><td>{{sinhvien.hoten() | lowercase}}</td></tr>
+<tr><td>Hoc phi: </td><td>{{sinhvien.hocphi | currency}}</td></tr>
+<tr><td>Mon hoc:</td><td>
+<ul>
+   <li ng-repeat="monhoc in sinhvien.tenMonHoc | filter: tenMonHoc |orderBy:'diemthi'">
+      {{ monhoc.ten + ', diemthi:' + monhoc.diemthi }}
+   </li>
+</ul>
+</td></tr>
+</table>
+</div>
+<script>
+var ungdungAngularjs = angular.module("ungdungAngularjs", []);
+
+ungdungAngularjs.controller('sinhvienController', function($scope) {
+   $scope.sinhvien = {
+      ho: "dinh anh",
+      ten: "tuan",
+      hocphi:200,
+      tenMonHoc:[
+         {ten:'Vat Ly Dai Cuong',diemthi:7.5},
+         {ten:'Triet Hoc',diemthi:8.0},
+         {ten:'Toan',diemthi:8.5}
+      ],
+      hoten: function() {
+         var doituongsinhvien;
+         doituongsinhvien = $scope.sinhvien;
+         return doituongsinhvien.ho + " " + doituongsinhvien.ten;
+      }
+   };
+});
+</script>
+</body>
+</html>

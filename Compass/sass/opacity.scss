@@ -1,0 +1,29 @@
+@import "compass/css3";
+ 
+.opacity-example {
+  background: red;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border: 2px solid black;
+}
+ 
+#opacity-10 {
+  @include opacity(0.1);
+}
+ 
+#opacity-20 {
+  @include opacity(0.2);
+}
+ 
+#opacity-50 {
+  @include opacity(0.5);
+}
+ 
+#opaque {
+  @include opaque;
+}
+ 
+#transparent {
+  @include transparent;
+}

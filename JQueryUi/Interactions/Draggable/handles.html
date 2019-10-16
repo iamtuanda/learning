@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Handles</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable1" ).draggable({handle: "p"});
+			$( "#draggable2" ).draggable({cancel: "p#hand"});
+		});
+	</script>
+</head>
+<body>
+	<div id="draggable1" style="width: 100px;padding: 10px;border:1px solid blue;text-align: center;">
+		<p style="width: 50px; border:1px solid green "> Handle that </p>
+	</div><br>
+	<div id="draggable2" style="width: 100px;padding: 10px;border:1px solid blue;text-align: center;">handle here
+		<p id="hand" style="width: 70px; height: 70px; border:1px solid green " > hihihihi</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* line 3, ../sass/transition.scss */
+.transition-example {
+  width: 50px;
+  height: 50px;
+  background: yellow;
+  margin: 30px;
+}
+
+/* line 10, ../sass/transition.scss */
+#width {
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+}
+
+/* line 14, ../sass/transition.scss */
+#width:hover {
+  width: 80px;
+}
+
+/* line 18, ../sass/transition.scss */
+#width-duration {
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+/* line 23, ../sass/transition.scss */
+#width-duration:hover {
+  width: 80px;
+}
+
+/* line 27, ../sass/transition.scss */
+#width-duration-easein {
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/* line 33, ../sass/transition.scss */
+#width-duration-easein:hover {
+  width: 80px;
+}
+
+/* line 37, ../sass/transition.scss */
+#width-delay {
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -moz-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+}
+
+/* line 42, ../sass/transition.scss */
+#width-delay:hover {
+  width: 80px;
+}

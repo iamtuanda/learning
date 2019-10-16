@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Siblings</title>
+<style>
+.siblings * { 
+  display: block;
+  border: 1px solid lightgreen;
+  color: lightgreen;
+  padding: 5px;
+  margin: 15px;
+}
+
+</style>
+
+<script  type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script>
+// $(document).ready(function(){
+
+//   $("h2").siblings('p').css({"color": "blue", "border": "2px solid black"});
+
+// });
+
+$(document).ready(function() {
+	$("#next").click(function() {
+		$("h3").nextAll().css({"color": "red", "border": "2px solid red"});
+		// nextUntil
+	});
+	$("#prev").click(function() {
+		$("h2").prevAll().css({"color": "red", "border": "2px solid red"});
+		//prevUntil
+	});
+});
+</script>
+</head>
+<body class="siblings">
+ <div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <h4>h4</h4>
+  <h5>h5</h5>
+  <p>p</p>
+</div>
+<button id="next">Next</button>
+<button id="prev">Prev</button>
+</body>
+</html>

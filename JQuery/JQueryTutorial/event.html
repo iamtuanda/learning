@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src=" ../jquery-3.4.1.min.js"> </script>
+
+
+
+<!-- click -->
+<!-- <script>
+$(document).ready(function(){
+
+   $("button").click(function(){ 
+    //click vào đối tượng
+	$("h2.intro").hide();
+
+   });
+}); 
+</script> 
+ -->
+
+
+<!-- dblclick -->
+  <!-- <script>
+ $(document).ready(function(){
+
+  $("p").dblclick(function(){
+     //click 2 lần vào đối tượng
+	 $("p.intro").hide();
+
+  });
+});
+ </script> -->
+
+
+
+
+<!-- animate -->  
+<!-- selector
+event
+animate -->
+
+<!-- <script>
+$(document).ready(function() {
+
+   $('button').click(function(event) {
+
+	$('h2').animate({marginLeft: 500},400 );
+    // đối tượng di chuyển
+   });
+
+}); 
+</script> 
+ -->
+
+
+
+
+<!-- mouseenter() -->
+
+<!-- <script>
+$(document).ready(function(){
+  $("#p1").mouseenter(function(){
+  //chuột trỏ vào đối thượng thì xảy ra sự kiện
+	alert("hellohihihhi");
+  });
+});
+</script> -->
+
+
+
+
+<!-- mouseleave -->
+<!-- <script>
+$(document).ready(function(){
+  $("#p1").mouseleave(function(){
+  //ngoài phạm vi của đối tượng
+	alert("aaaaaaaaaaaaaaaa");
+  });
+});
+</script>
+ -->
+
+
+<!-- mousedown -->
+<!-- <script>
+$(document).ready(function(){
+  $("#p1").mousedown(function(){
+  //nhấn chuột trái
+	alert("errowwwwww");
+  });
+});
+</script>
+ -->
+
+
+<!-- mouseup -->
+<!-- <script>
+$(document).ready(function(){
+  $("#p1").mouseup(function(){
+  //nhả chuột trái ra thì sự kiện sẽ bắt đầu
+	alert("hellohihihhi");
+  });
+});
+</script> -->
+
+
+
+<!-- hover -->
+<!-- <script>
+$(document).ready(function(){
+  $("#p1").hover(function(){
+  // kết hợp mouse enter và leave
+	alert("tuan dinh anh hihi hhahhaha");
+  });
+});
+</script>
+ -->
+
+
+
+<!-- focus and blur-->
+
+<script>
+
+$(document).ready(function(){
+
+  $("input").focus(function(){
+  	//chỉ vào đối tượng thì sẽ xảy ra
+    $(this).css("background-color", "yellow");
+
+  });
+
+  $("input").blur(function(){
+    //xảy ra khi ra khỏi đối tượng
+    $(this).css("background-color", "green");
+
+  });
+});
+
+</script>
+
+
+<!-- on() Method -->
+<script>
+	$(document).ready(function(){
+     $("#b1").on({ 
+     	mouseenter: function(){
+     	$(this).css("background-color","lightblue");
+     },
+       mouseleave: function(){
+       	$(this).css("background-color","lightgreen");
+       },
+       click: function(){
+       	$(this).css("background-color","red");
+       }
+
+     	// $(this).hide();
+     }); 
+
+	});
+
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+<h2 class="intro">jquery hieu ung </h2>
+
+<p class="intro">this is my text</p>
+<p id="p1">  hiden it.   </p>
+
+<button id="b1">Click me</button><br>
+
+Name : <input type="text" name="fullname" placeholder="Username"><br>
+Password: <input type="Password" name="Password" placeholder="Password">
+
+
+
+
+</body>
+</html>

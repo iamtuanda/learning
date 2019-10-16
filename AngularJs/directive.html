@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<body ng-app="myApp">
+
+<div  ng-init="names=[
+{name:'tuan', country:'ha tinh'},
+{name:'dung',country:'ha noi'},
+{name:'tien',country:'thanh hoa'}]">
+
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in names">
+  {{ x.name + ': ' + x.country }}</li>
+</ul>
+
+</div>
+<div class="tuanda-directive"></div>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("tuandaDirective", function() {
+    return {
+        restrict : "C",
+        template : "<h2>tuanda test my directives</h2>"
+    };
+});
+</script>
+
+<p><strong>Note:</strong> You must add the value "C" to the restrict property to be able to invoke the directive from a class name.</p>
+
+
+
+
+</body>
+</html>

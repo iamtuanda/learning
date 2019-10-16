@@ -1,0 +1,18 @@
+.title-box, .navbar ul.menu li a {
+  color: #dacb46;
+  text-shadow: 1px 1px 1px #1a1a1a;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.navbar ul.menu {
+  list-style: none;
+}
+.navbar ul.menu li {
+  padding: 5px;
+}
+.navbar ul.menu li a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=extend.css.map */

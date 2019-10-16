@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Visual feedback</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable1" ).draggable({
+				opacity: 0.5,
+				helper: "clone"
+			});
+			$( "#draggable2" ).draggable({
+				cursor: "move",
+				cursorAt: { top: -12, left: -20 },
+				helper: function( event ) {
+				return $( "<div class='ui-widget-header'>hihihihihih</div>" );
+					}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="draggable1" style="width: 100px;padding: 10px;border:1px solid blue;text-align: center;">
+		<p>Visual feedback</p>
+	</div><br>
+	<div id="draggable2" style="width: 100px;padding: 10px;border:1px solid blue;text-align: center;">
+		<p > Visual hhaahaha </p>
+	</div>
+</body>
+</html>

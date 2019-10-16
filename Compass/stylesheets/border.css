@@ -1,0 +1,39 @@
+/* line 4, ../sass/border.scss */
+.example table {
+  border: 2px solid black;
+}
+/* line 16, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table th, .example table td {
+  border-right: 1px solid #7a98c6;
+  border-bottom: 1px solid #7a98c6;
+  border-left-width: 0;
+  border-top-width: 0;
+}
+/* line 22, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table th:last-child, .example table td:last-child {
+  border-right-width: 0;
+}
+/* line 28, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table th.last, .example table td.last {
+  border-right-width: 0;
+}
+/* line 33, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table tbody tr:last-child th, .example table tbody tr:last-child td, .example table tfoot tr:last-child th, .example table tfoot tr:last-child td {
+  border-bottom-width: 0;
+}
+/* line 37, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table tbody tr.last th, .example table tbody tr.last td, .example table tfoot tr.last th, .example table tfoot tr.last td {
+  border-bottom-width: 0;
+}
+/* line 6, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table thead th {
+  border-bottom: 2px solid black;
+}
+/* line 9, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table tfoot th, .example table tfoot td {
+  border-top: 2px solid black;
+}
+/* line 12, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_borders.scss */
+.example table th:first-child {
+  border-right: 2px solid black;
+}

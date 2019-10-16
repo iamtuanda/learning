@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Droppable - Accept</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+        #droppable { width: 150px; height: 150px; border:1px solid blue; padding: 0.5em; float: left; margin: 10px;  }
+        #draggable { width: 100px; height: 100px; border:1px solid blue; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#draggable").draggable();
+			$("#droppable").droppable({
+				accept : "#draggable",
+				activate: function(){
+					$(this).css("background-color", "blue");
+				},
+				over: function(){
+					$(this).css("background-color","red");
+				},
+				out: function(){
+					$(this).css("background-color","yellow");
+				},
+				drop: function(){
+					$(this).css("background-color","orange");
+				},
+				deactivate: function(){
+					$(this).css("background-color","");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="draggable">
+	</div>
+	<div id="droppable">
+	</div>
+
+</body>
+</html>

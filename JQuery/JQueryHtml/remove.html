@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RemoveHtmlJQuery</title>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+ $("#btn1").click(function(){
+ $("#rm1").remove();
+		});
+// delete 
+ $("#btn2").click(function(){
+ $("#rm2").remove();
+		});
+
+
+//delete text
+$("#btn3").click(function(){
+ $("#emp").empty();
+
+});
+
+$("#btn4").click(function(){
+ $("p").remove("#rm1,#rm2");
+		});
+
+
+});
+
+</script>
+</head>
+<div id="emp" style="height: 80px;width:80px;border: 2px solid black; background-color: lightblue;">
+	text will be delete
+	<p>hihihihi</p>
+
+
+</div>
+<body>
+<p id="rm1">you say</p>
+<p id="rm2">i say</p>
+Name <input type="text" name="name" placeholder="name"><br><br>
+
+<button id="btn1">remove firt</button>
+<button id="btn2">remove second</button>
+<button id="btn3"> empty text</button>
+<button id="btn4"> remove all  </button>
+
+
+</body>
+</html>

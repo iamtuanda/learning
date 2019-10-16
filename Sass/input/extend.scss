@@ -1,0 +1,21 @@
+.title-box {
+    color: #dacb46;
+    text-shadow: 1px 1px 1px #1a1a1a;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.navbar {
+    ul.menu {
+        list-style: none;
+
+        li {
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                @extend .title-box;
+            }
+        }
+    }
+}

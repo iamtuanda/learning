@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ví dụ sử dụng model</title>
+        <style>*{margin:0}body{padding:20px}</style>
+        <script src="angular.min.js"></script>
+        <script language="javascript">
+            var app = angular.module('myApp', []);
+            app.controller('optionsController', ['$scope', function($scope) {
+                         
+            }]);
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="optionsController">
+            <form name="userForm">
+                <h5>Nhập nội dung của bạn nào</h5>
+                <input type="text" name="userName" ng-model="user.name"/><br />
+                <h5>Chuỗi mà Bạn đang nhập là:</h5>
+                <span ng-bind="user.name"></span>
+            </form>
+        </div>
+    </body>
+</html>

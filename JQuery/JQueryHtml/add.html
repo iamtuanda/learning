@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AddHtmlJQuery</title>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $("#btn1").click(function(){
+ $("p").append("<b>love tmh-techlab</b>");
+		});
+
+ $("#btn2").click(function(){
+ $("p").prepend("<em>love tmh-techlab</em>");
+		});
+
+ $("#btn3").click(function(){
+ $("div").after("tuandididididd");
+		});å
+
+ $("#btn4").click(function(){
+ $("div").before("anhhhh");
+		});
+
+ 
+
+		});
+
+</script>
+</head>
+
+<body>
+<p>you say</p>
+<p>i say</p>
+
+
+<div>
+  <p>hihihiihihihihi</p>
+</div>
+
+<button id="btn1">after append</button>
+<button id="btn2">before prepend</button>
+<button id="btn3"> click after</button>
+<button id="btn4"> click before</button><br>
+
+
+</body>
+</html>

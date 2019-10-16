@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+<script>
+ $(document).ready(function(){
+  $("#click").click(function(){
+    $("#slide").slideToggle(3000);
+  });
+  $("button").click(function(){
+    $("#slide").stop();
+  });
+});
+</script>
+<style> 
+#slide, #click {
+  padding: 5px;
+  text-align: center;
+  background-color: lightgreen;
+  border: solid 2px yellow;
+}
+
+#slide {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+	<button>stop</button>
+ <div id="click"> click this hihihihi </div>
+ <div id="slide"> Tmh-techlap konichiwa =')) </div>
+
+</body>
+</html>

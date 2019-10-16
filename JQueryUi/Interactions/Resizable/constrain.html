@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Resizable-Constrain </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+  #container { width: 300px; height: 300px; border: 1px solid red; }
+  #container h3 { text-align: center; margin: 0; margin-bottom: 10px; background-color:lightgreen; }
+  #resizable { background-position: top left; width: 150px; height: 150px; background-color: gray }
+  #resizable, #container { padding: 0.5em; }
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#resizable" ).resizable({
+				containment: "#container",
+				// id của html làm vùng lớn nhất
+				animate: true
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="container" class="ui-widget-content">
+        <h3 class="ui-widget-header">Containment</h3>
+      <div id="resizable" class="ui-state-active">
+        <h3 class="ui-widget-header">Resizable</h3>
+      </div>
+    </div>
+	
+</body>
+</html>

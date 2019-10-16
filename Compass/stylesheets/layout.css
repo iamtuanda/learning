@@ -1,0 +1,58 @@
+/* line 5, ../sass/layout.scss */
+.stretch-container {
+  border: 1px solid #999999;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 13, ../sass/layout.scss */
+#stretch-full, #stretch-offset, #stretch-x, #stretch-y {
+  border: 3px solid #4c6b99;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  background-color: #192433;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+}
+
+/* line 25, ../sass/layout.scss */
+#stretch-full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 30, ../sass/layout.scss */
+#stretch-offset {
+  position: absolute;
+  top: 1em;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+}
+
+/* line 35, ../sass/layout.scss */
+#stretch-x {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* line 40, ../sass/layout.scss */
+#stretch-y {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}

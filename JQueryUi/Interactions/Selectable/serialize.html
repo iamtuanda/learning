@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Selectable-Serialize </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+  #feedback { 
+	font-size: 1.4em; 
+	}
+
+  #selectable .ui-selecting { 
+	background: red;
+	}
+
+  #selectable .ui-selected { 
+	background: blue; 
+	color: white; 
+	}
+
+  #selectable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 60%; 
+	}
+
+  #selectable li { 
+	margin: 3px; 
+	padding: 0.4em; 
+	font-size: 1.4em; 
+	height: 18px; 
+	}
+
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#selectable" ).selectable({
+				stop: function() {
+        var result = $( "#select-result" ).empty();
+        $( ".ui-selected", this ).each(function() {
+          var index = $( "#selectable li" ).index( this );
+          result.append( " #" + ( index + 1 ) );
+        });
+      }
+			});
+		});
+	</script>
+</head>
+<body>
+  <p id="feedback">
+	<span>You've selected:</span> <span id="select-result">none</span>.
+  </p>
+
+	<ol id="selectable">
+	<li class="ui-widget-content">Item 1</li>
+	<li class="ui-widget-content">Item 2</li>
+	<li class="ui-widget-content">Item 3</li>
+	<li class="ui-widget-content">Item 4</li>
+	<li class="ui-widget-content">Item 5</li>
+	<li class="ui-widget-content">Item 6</li>
+	<li class="ui-widget-content">Item 7</li>
+	</ol>
+	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJs - Sql</title>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <style type="text/css">
+    table {
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+    table th, td {
+      padding: 5px;
+    }
+    table th {
+      background-color: #f1f1f1;
+    }
+    table tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div ng-app="ngApp" ng-controller="tableController">
+    <table border="1">
+      <thead>
+        <th>Index</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in content | orderBy: 'city'">
+          <td>{{$index + 1}}</td>
+          <td>{{x.Name}}</td>
+          <td>{{x.City}}</td>
+          <td>{{x.Country}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script type="text/javascript">
+    angular.module('ngApp', []).controller('tableController', function($scope, $http){
+      $http.get("http/customers_mysql.php")
+      .then(function mySuccess(response){
+        $scope.content = response.data.records;
+      }, function myError(response) {
+        alert("Can not load file");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p,.form").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Click</button>
+
+
+<p>hello my friend</p>
+
+<div class="form">
+    	Name : <input type="text" placeholder="username"><br>
+        Password : <input type="password" placeholder="password">
+ </div>
+
+</body>
+</html>

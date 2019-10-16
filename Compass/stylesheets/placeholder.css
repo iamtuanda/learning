@@ -1,0 +1,20 @@
+/* line 61, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type="text"]:-moz-placeholder {
+  color: #bfbfbf;
+  font-style: italic;
+}
+/* line 64, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type="text"]::-moz-placeholder {
+  color: #bfbfbf;
+  font-style: italic;
+}
+/* line 67, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type="text"]:-ms-input-placeholder {
+  color: #bfbfbf;
+  font-style: italic;
+}
+/* line 56, ../../../.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type="text"]::-webkit-input-placeholder {
+  color: #bfbfbf;
+  font-style: italic;
+}

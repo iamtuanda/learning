@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Event color</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#draggable").draggable({
+				
+				containment: "parent",
+
+				drag: function(){
+					$(this).css("background-color","red");
+				},
+				stop: function(){
+					$(this).css("background-color","blue");
+				}
+			});
+			$("#start").draggable({
+				start: function(){
+					$(this).css("background-color","lightgreen");
+				},
+				stop: function(){
+					$(this).css("background-color","gray");
+				}
+			});
+			
+
+		});
+
+			
+	</script>
+</head>
+<body>
+   <div style="width: 500px; height: 500px; padding: 10px; border: 1px solid black; margin: 0 10px 10px 0;">
+	<div id="draggable" style="width: 100px; height: 100px; padding: 10px; border: 1px solid black; margin: 0 10px 10px 0; text-align: center;">
+		<p>drag and stop</p>
+	</div><br>
+	<div id="start" style="width: 100px; height: 100px; padding: 10px; border: 1px solid black; margin: 0 10px 10px 0; text-align: center;">
+		<p> start and stop</p>
+	</div>
+   </div>
+</body>
+</html>

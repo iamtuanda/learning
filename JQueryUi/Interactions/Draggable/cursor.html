@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Cursor style</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable1" ).draggable({cursor : "move", cursorAt : {top : 56, left : 56}});
+			$( "#draggable2" ).draggable({cursor: "crosshair", cursorAt: { top: -5, right: -5 }});
+			$( "#draggable3" ).draggable({cursorAt : {bottom: 0 } });
+		});
+	</script>
+</head>
+<body>
+	<div id="draggable1" style="width: 100px; height: 100px; padding: 10px; border: 1px solid black; margin: 0 10px 10px 0; text-align: center;">
+		<p>center</p>
+	</div><br>
+	<div id="draggable2" style="width: 100px; height: 100px; padding: 10px;border:1px solid yellow; text-align: center;">
+		<p>topleft</p>
+	</div><br>
+	<div id="draggable3" style="width: 100px; height: 100px; padding: 10px;border:1px solid lightgreen; text-align: center;">
+		<p>bottom</p>
+	</div>
+</body>
+</html>

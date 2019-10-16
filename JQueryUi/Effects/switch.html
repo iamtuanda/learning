@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Effect - Switch </title>
+	<script type="text/javascript" src="../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../jquery-ui.css">
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        border: 1px solid red;
+      }
+      .big {
+        width: 250px;
+        height: 250px;
+      }
+
+      .blue {
+       background-color: yellow;
+       border: 2px solid black;
+      }
+    </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+      $( "button" ).click(function() {
+        $("div").switchClass( "big", "blue", 5000, "easeInOutQuad");
+      });
+    });
+	</script>
+</head>
+
+<body>
+  <button> show </button>
+    <div class="big"></div>
+</body>
+
+</html>

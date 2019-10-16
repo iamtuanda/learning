@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Constrain movement</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#draggable1").draggable({axis: "y"});
+        $("#draggable2").draggable({axis: "x"}); 
+        $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+        $( "#draggable4" ).draggable({ containment: "parent"});
+	});
+
+
+</script>
+</head>
+<body>
+	<div id="draggable1" style="width: 100px;padding: 5px;border:1px solid blue; text-align: center;">
+		<p>scroll up down</p>
+	</div><br>
+	<div id="draggable2" style="width: 100px;padding: 5px;border:1px solid black; text-align: center;">
+		<p>scroll left right</p>
+	</div><br>
+<div id="containment-wrapper" style="width: 55%; height:200px; border:2px solid #ccc; padding: 10px;">
+	<div id="draggable3" style="width: 100px;padding: 5px;border:1px solid lightgreen; text-align: center;">
+		<p>   aaaa </p>
+	</div><br>
+	<div  style="width: 200px; height: 100px;padding: 5px;border:2px solid lightblue; text-align: center;">
+		<p id="draggable4" style="width: 100px;padding: 5px;border:1px solid lightgreen; text-align: center;">    bbbb   </p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Widgets - Controlgroup slitbutton </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+  <style>
+    .ui-button-icon-only.demo-splitbutton-select {
+    width: 1em;
+  }
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        $( "select" ).selectmenu({
+      classes: {
+        "ui-selectmenu-button": "ui-button-icon-only demo-splitbutton-select"
+      },
+      change: function(){
+        $( ".output" ).append( "<li>" + this.value + "</li>" );
+      }
+    });
+    $( ".controlgroup" ).controlgroup();
+    $( "button" ).click(function() {
+      $( ".output" ).append( "<li>Running Last Action...</li>" );
+    });
+  } );
+	</script>
+</head>
+<body>
+ <div class="widget">
+  <h1>Split button</h1>
+  <div class="controlgroup">
+    <button>Run last option</button>
+    <select>
+      <option>Open...</option>
+      <option>Save</option>
+      <option>Delete</option>
+    </select>
+  </div>
+  <br>
+  <h3>Output:</h3>
+  <ul class="output"></ul>
+</div>
+</body>
+</html>

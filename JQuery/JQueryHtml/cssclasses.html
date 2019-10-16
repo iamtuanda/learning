@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CssClassesHtmlJQuery</title>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $("#btn1").click(function(){
+ $("p").addClass("color");
+$("#div1").addClass("font");
+		});
+
+$("#btn2").click(function(){
+ $("#all").addClass("color font");
+
+});
+
+
+ 	$("#btn3").click(function(){
+ 		$("p").removeClass();
+ 	});
+
+    $("#btn4").click(function(){
+ 		$("p").toggleClass("yellow");
+ 	});
+ 
+});
+
+
+</script>
+<style type="text/css">
+.color{
+	color: lightgreen;
+
+}	
+
+.font{
+font-size: 30px;
+color: yellow;
+}
+.yellow{
+	color: red;
+}
+
+
+</style>
+</head>
+
+<body>
+<p>tmh techlab hihihihihihih</p>
+<p>hahhahahahhahah</p>
+<p class="yellow">this text have yellow color</p>
+
+<div id="div1">
+  add class color yellow
+</div>
+<div id="all">hmmmmmmmmmmmmm </div>
+<button id="btn1"> add class </button>
+<button id="btn2"> add all</button>
+<button id="btn3">remove class </button>
+<button id="btn4"> toggle class</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

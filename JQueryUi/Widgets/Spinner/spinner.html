@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Widgets - Spinner </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+  <style>
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+      $("#myspinner").spinner({
+        min: 0,
+        max: 100,
+        step: 5,
+        start : function() {
+          var vl = $(this).spinner("value");
+          $("#spinnervalue").html(vl);
+        }
+        // hiển thị gái trị trước khi click
+
+        // stop : function() {
+        //   var vl = $(this).spinner("value");
+        //   $("#spinnervalue").html(vl);
+        // }
+        // hiện thị giá trị khi click 
+
+        // spin : function() {
+        //   var vl = $(this).spinner("value");
+        //   $("#spinnervalue").html(vl);
+        // }
+        // hiện thị gái trị trước khi click
+
+        // change : function() {
+        //   //  khi click ngoài khoảng trắng thì thực hiện
+        //   var vl = $(this).spinner("value");
+        //   $("#spinnervalue").html(vl);
+        // }
+      });
+    });
+	</script>
+</head>
+<body>
+  SPINNER : <input type="text" id="myspinner" style="width: 250px;"><br>
+  Giá trị hiện tại : <label id="spinnervalue">0</label>
+</body>
+</html>

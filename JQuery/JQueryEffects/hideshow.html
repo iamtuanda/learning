@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $(".form").hide(1000);
+  });
+  $("#show").click(function(){
+    $(".form").show(1000);
+  });
+  $("#toggle").click(function(){
+  	$(".form").toggle(1000);
+  });
+});
+</script>
+</head>
+<body>
+ <div class="form" id="form-login">
+    	<input type="text" placeholder="username"><br>
+        <input type="password" placeholder="password">
+ </div>
+
+
+
+<button id="hide">Hide</button>
+<button id="show">Show</button> 
+<button id="toggle">toggle</button>
+
+</body>
+</html>

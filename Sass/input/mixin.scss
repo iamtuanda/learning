@@ -1,0 +1,19 @@
+@mixin colorVsFont {
+    color: #fff;
+    font-size: 50px;
+}
+
+.navbar {
+    ul.menu {
+        list-style: none;
+
+        li {
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                @include colorVsFont;
+            }
+        }
+    }
+}

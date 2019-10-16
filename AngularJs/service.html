@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJs - Services</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myController">
+		<p> hihihih</p>
+		<h1>{{myHeader}}</h1>
+		<hr>
+		<hr>
+		<p>what time is it? </p>
+		<h1>{{time}}</h1>
+		<hr>
+		<hr>
+		<p>The url of this page is: </p>
+		<h3><i>{{myUrl}}</i></h3>
+	</div>
+	<script type="text/javascript">
+		angular.module('myApp', []).controller('myController', function($scope, $location, $timeout, $interval ){
+			$scope.myUrl = $location.absUrl();
+			$scope.myHeader = "Hi Tmh-Techlab!"
+			$timeout(function() {
+				$scope.myHeader = "quay len di ae ơi ahihii huhuhu hichichc  ^-^";
+			},3000);
+			$scope.time = new Date().toLocaleTimeString();
+			$interval(function() {
+				$scope.time = new Date().toLocaleTimeString();
+			},1000);
+		});
+	</script>
+</body>
+</html>

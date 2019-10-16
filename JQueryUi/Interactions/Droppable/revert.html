@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Droppable - Revert propagation</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+  #draggable, #draggable2 { 
+  	width: 100px; 
+  	height: 100px; 
+  	padding: 0.5em; 
+  	float: left;
+  	 margin: 10px 10px 10px 0;
+  	 text-align: center;
+  	  }
+  #droppable { 
+  	width: 150px;
+  	 height: 150px; 
+  	 padding: 0.5em; 
+  	 float: left; 
+  	 margin: 10px; 
+  	 text-align: center;
+  	 background-color: lightg;
+  	}
+  	#droppable.ui-state-active{
+  		background-color: red;
+  	}
+  	#droppable.ui-state-hover{
+  		background-color: lightblue;
+  	}
+  	#droppable.ui-state-highlight{
+  		background-color: orange;
+  	}
+
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			 $( "#draggable" ).draggable({ revert: "valid" });
+			 $( "#draggable2" ).draggable({ revert: "invalid" });
+
+			 $( "#droppable" ).droppable({
+				classes: {
+					"ui-droppable-active": "ui-state-active",
+					"ui-droppable-hover": "ui-state-hover"
+				},
+				drop: function( event, ui ) {
+					$( this )
+						.addClass( "ui-state-highlight" )
+						.find( "p" )
+						.html( "Dropped!" );
+					  }
+				  });
+			   } );
+	</script>
+</head>
+<body>
+	<div id="draggable" class="ui-widget-content">
+  <p>I revert when I'm dropped</p>
+</div>
+ 
+<div id="draggable2" class="ui-widget-content">
+  <p>I revert when I'm not dropped</p>
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>Drop me here</p>
+</div>
+</body>
+</html>

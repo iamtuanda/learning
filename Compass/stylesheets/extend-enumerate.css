@@ -1,0 +1,18 @@
+/* line 2, ../sass/extend-enumerate.scss */
+.example .base-class, .example .class-2, .example .class-3, .example .class-4 {
+  background-color: #aaaaaa;
+  border: 2px solid #777777;
+  margin: 1em;
+}
+/* line 8, ../sass/extend-enumerate.scss */
+.example .class-2 {
+  margin-left: 1em;
+}
+/* line 8, ../sass/extend-enumerate.scss */
+.example .class-3 {
+  margin-left: 2em;
+}
+/* line 8, ../sass/extend-enumerate.scss */
+.example .class-4 {
+  margin-left: 3em;
+}

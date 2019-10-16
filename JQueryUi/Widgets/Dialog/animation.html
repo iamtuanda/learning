@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Widgets - Dialog animation </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#dialog").dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 1000
+
+				},
+				hide: {
+					effect: "explode",
+					duration: 1000
+				}
+			});
+			$("#opener").on("click", function(){
+				$("#dialog").dialog("open");
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="dialog" title="tmh dialog">
+		<p> thiahaihdanclhcncnahatuandjahhdaw </p>
+	</div>
+	<button id="opener">dialog open</button>
+</body>
+</html>

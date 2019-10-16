@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GetHtmlJQuery</title>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    var test = $("#get").text();
+    $("#btn1").click(function(){
+    	alert(test);
+    	// console.log(1);
+    });
+    $("#btn2").click(function(){
+    alert("HTML: " + $("#get").html());
+  });
+
+   $("#btn3").click(function(){
+   	// console.log(2);
+   alert($("#tmh").attr("href"));
+   	// console.log(3);
+   });
+  // var cvalue =$("#val").val();
+  $("#btn4").click(function(){
+    // alert("value:" + cvalue);
+    alert("Value: " + $("#val").val());
+  });
+
+});
+
+</script>
+</head>
+
+<body>
+<p id="get">hihiheheh<em>tuandinh</em> </p>
+<p><a href="http://www.tmh-techlab.vn" id="tmh">  tmh-techlab.vn </a></p>
+<p>Name : <input type="text" id="val" value="TuanDinh"> </p>
+
+
+<button id="btn1">click text</button>
+<button id="btn2">click html</button>
+<button id="btn3">show href</button>
+<button id="btn4">click value</button>
+</body>
+</html>

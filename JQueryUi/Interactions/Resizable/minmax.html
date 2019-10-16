@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Resizable-MinMax </title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<style>
+  #resizable { width: 150px; height: 150px; padding: 0.5em; }
+  #resizable h3 { text-align: center; margin: 0; }
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#resizable" ).resizable({
+				maxHeight: 350,
+				maxWidth: 350,
+				minHeight: 150,
+				minWidth: 150
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="resizable" class="ui-widget-content">
+		<h3 class="ui-widget-header">MinMax Size</h3>
+	</div>
+	
+</body>
+</html>

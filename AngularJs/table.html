@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJs - Table</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body >
+	<div ng-app="myApp"  ng-controller="customersCtrl"> 
+
+<table>
+  <tr ng-repeat="x in names">
+    <td>{{ x.Name }}</td>
+    <td>{{ x.Country }}</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+   $http({
+    method : "GET",
+    url : "http/customers.php"
+  })
+    .then(function (response) {$scope.names = response.data.records;},
+      function (response) {
+        alert("Can not load file");
+      });
+});
+</script>
+</body>
+</html>

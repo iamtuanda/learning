@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#fadein").click(function(){
+	$("#h1").fadeIn();
+	$("#h2").fadeIn("slow");
+	$("#h3").fadeIn(3000);
+  });
+ $("#fadeout").click(function(){
+    $("#h1").fadeOut();
+    $("#h2").fadeOut("slow");
+    $("#h3").fadeOut(2000);
+  });
+ $("#fadetoggle").click(function(){
+    $("#h1").fadeToggle();
+    $("#h2").fadeToggle("slow");
+    $("#h3").fadeToggle(3000);
+  });
+ // $("button").click(function(){
+ //    $("#h1").fadeTo("1000", 0.22);
+ //    $("#h2").fadeTo("slow", 0.47);
+ //    $("#h3").fadeTo("slow", 0.91);
+ //  });
+});
+</script>
+</head>
+<body>
+ <p> This is FadeIn() demotest </p>
+ <p> This is FadeOut() demotest </p>
+ <p> This is FadeToggle() demotest </p>
+ <!-- <p> This is FadeTo() demotest </p> -->
+   <button id="fadein">FadeIn</button>
+   <button id="fadeout">FadeOut</button>
+   <button id="fadetoggle">FadeToggle</button><br>
+   <!-- <button id="fadeto">FadeTo</button> -->
+
+  <div id="h1" style="width:80px;height:80px;display:none;background-color:yellow;"></div><br>
+  <div id="h2" style="width:80px;height:80px;display:none;background-color:lightgreen;"></div><br>
+  <div id="h3" style="width:80px;height:80px;display:none;background-color:lightblue;"></div>
+
+
+
+
+
+
+
+ </body>
+</html>

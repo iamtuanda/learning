@@ -1,0 +1,22 @@
+@mixin my-font-type($font: 'base') {
+    @if ($font==bold) {
+        font-family: 'Avenir-Demi';
+    }
+    @else if ($font==italic) {
+        font-family: 'Avenir-LightItal';
+    }
+    @else {
+        font-family: 'Avenir-Light';
+    }
+}
+
+.title1 {
+    @include my-font-type('bold');
+    font-weight: bold;
+}
+.title2 {
+    @include my-font-type('italic');
+}
+.title3 {
+    @include my-font-type();
+}

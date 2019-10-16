@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src=" ../jquery-3.4.1.min.js"></script>
+<script type="text/javascript"> 
+
+$(document).ready(function(){
+
+  $("button").click(function(){
+
+    // $("div").animate({
+    // left: '350px',
+    // opacity: '0.2',
+    // height: '+=50px',
+    // width:'+=50px'
+    // height:'toggle'
+    var div = $("div");
+    div.animate({height: '200px', opacity: '0.4'}, "slow");
+    div.animate({width: '200px', opacity: '0.8'}, "slow");
+    div.animate({fontSize: '2em'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+  
+
+  });
+});
+</script> 
+</head>
+
+ <body>
+   <button>Click animation</button> <br><br>
+   <div style="background:lightblue;height:100px;width:100px;position:absolute;">hihihahaha</div>
+
+ </body>
+
+</html>

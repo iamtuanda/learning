@@ -1,0 +1,12 @@
+/* line 6, variable.scss */
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+
+/* line 12, variable.scss */
+#container {
+  width: 680px;
+  border: 1px blue double;
+}

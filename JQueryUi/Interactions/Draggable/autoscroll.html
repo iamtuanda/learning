@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI Draggable - Auto-scroll</title>
+	<script type="text/javascript" src="../../jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../jquery-ui.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#draggable1" ).draggable({scroll : true});
+			$( "#draggable2" ).draggable({scroll : true, scrollSensitivity:100});
+			$( "#draggable3" ).draggable({scroll : true, scrollSpeed:100});
+		});
+	</script>
+</head>
+<body>
+	<div id="draggable1" style="width: 100px;padding: 10px;border:1px solid blue;text-align: center;">
+		<p>scroll set to true, default settings</p>
+	</div><br>
+	<div id="draggable2" style="width: 100px;padding: 10px;border:1px solid yellow; text-align: center;">
+		<p>scrollSensitivity set to 100</p>
+	</div><br>
+	<div id="draggable3" style="width: 100px;padding: 10px;border:1px solid lightgreen; text-align: center;">
+		<p>scrollSpeed set to 1000</p>
+	</div>
+</body>
+</html>
